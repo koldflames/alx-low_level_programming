@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ *main - the entry point of the program
+ *Description - prints strings using fprintf
+ *Return: 1
+ *Description: the standard error
+ */
+int main(void)
+{
+fprintf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+return (1);
+}
