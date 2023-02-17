@@ -1,8 +1,13 @@
 #include <stdio.h>
 
+/**
+ *main - the entry point of the program
+ *Description - prints out the strings using puts
+ *Return: 0
+ *Description: stops the program
+ */
 int main(void)
 {
-  /*Prints the string to the console using the puts function */
-puts("Programming is like buidling a multilingual puzzle\n");
+puts("\"Programming is like buidling a multilingual puzzle,\n");
 return (0);
 }
