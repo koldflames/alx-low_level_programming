@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *main - the entry point of the program
- *Description - prints out sizes of each type
+ *print_alphabet - the entry point of the program
+ *Description - prints the lowercase alphabets and a new line
  *Return: 0
  *Description: stops the program
  */
