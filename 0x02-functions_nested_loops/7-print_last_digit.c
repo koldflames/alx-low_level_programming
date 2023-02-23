@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *print_last_digit - the entry point of the program
  *Description - prints the last digit
