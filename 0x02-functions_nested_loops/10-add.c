@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *add - the entry point of the program
+ *add: the entry point of the program
  *Description - adds two ints
  *@m: int
  *@n: int
