@@ -6,13 +6,17 @@
  */
 void times_table(void)
 {
-int i, j, product;
+int i, j;
 for (i = 0; i <= 9; i++)
 {
 for (j = 0; j <= 9; j++)
 {
-product = i * j;
-printf("%d\t", product);
+int product = i * j;
+printf("%d", product);
+if (j < 9)
+{
+printf(", ");
+}
 }
 printf("\n");
 }
