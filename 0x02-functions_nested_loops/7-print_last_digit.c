@@ -15,5 +15,5 @@ if (last_digit < 0)
 last_digit = -last_digit;
 }
 printf("%d", last_digit);
- return (last_digit);
+return (last_digit);
 }
