@@ -4,6 +4,8 @@
  *Description - prints the lowercase alphabets and a new line
  *Return: 0
  *Description: stops the program
+ *int c - Parameter
+ *Description - argument
  */
 int _islower(int c)
 {
