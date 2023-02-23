@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *jack_bauer - prints every minute
  *Description - prints the sign of a number
