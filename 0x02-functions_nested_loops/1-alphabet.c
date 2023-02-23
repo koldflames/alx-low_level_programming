@@ -5,7 +5,7 @@
  *Return: 0
  *Description: stops the program
  */
-int main(void)
+void print_alphabet (void)
 {
 char letter = 'a';
 while (letter <= 'z')
