@@ -7,16 +7,21 @@
  */
 void print_times_table(int n)
 {
-if (n < 0 || n > 15)
+if (n > 15 || n < 0)
 {
 return;
 }
-for (int i = 0; i <= n; i++)
+int row = 0, col = 0, product = 0;
+while (row <= n)
 {
-for (int j = 0; j <= n; j++)
+while (col <= n)
 {
-printf("%-4d", i*j);
+product = row * col;
+printf("%-4d", product);
+col++;
 }
 printf("\n");
+col = 0;
+row++;
 }
 }
