@@ -2,20 +2,18 @@
 
 /**
  * print_triangle - print a triangle aligned right, using '#'
- * @size: height of triangle
+ * @h: height of triangle
  */
 
-void print_triangle(int size)
+void print_triangle(int h)
 {
 
 	int s, b;
-
 	s = 0;
-
-	b = size;
+	b = h;
 
     /*for all i up to the forth */
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < h; i++)
 	{
 		s = s + 1;
 		b = b - 1;
