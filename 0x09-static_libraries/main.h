@@ -1,9 +1,6 @@
-/*
- * File: main.h
- * Auth: Allan
- * Desc: Header file containing the prototypes of all functions 
- * 	included in the static library main.a.
- */
+#ifndef MAIN_H
+#define MAIN_H
+
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
