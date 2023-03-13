@@ -1,27 +1,23 @@
 #include "main.h"
-/**
- * _strncat - concatenate two strings base on size
- * @dest: pointer arg 1
- * @src: pointer arg 2
- * @n: Size
- * Return: concatenated strings
-*/
 
+/**
+ * _strncat - concatenate two strings
+ * @dest: string
+ * @src: string
+ * @n: number of elements to concatenate in
+ * Return: pointer to resulting `dest`
+ */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j;
+	int i, c;
 
 	for (i = 0; dest[i] != '\0'; i++)
-	{
 		;
-	}
-	for (j = 0; j < n && src[j] != '\0'; j++)
-	{
-		dest[i] = src[j];
-		i++;
-	}
 
-	dest[i] = '\0';
+	for (c = 0; src[c] != '\0' && n > 0; c++, n--, i++)
+	{
+		dest[i] = src[c];
+	}
 	return (dest);
 }
