@@ -11,13 +11,11 @@
  *
  * Description: singly linked list node structure
  */
-
 typdef struct listint_s
 {
 	int n;
 	struct listint_s *next;
 }listint_t;
-
 
 /**
  * struct listp_s - this is another singly linked list
@@ -26,13 +24,11 @@ typdef struct listint_s
  *
  * Description: singly linked list of pointers
  */
-
 typedef struct listp_s
 {
 	void *p;
 	struct listp_s *next;
 }listp_t;
-
 
 /* PROTOTYPES TO WORK WITH */
 size_t print_listint(const listint_t *h);
