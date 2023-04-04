@@ -12,7 +12,7 @@ int pop_listint(listint_t **head)
 	listint_t *temporal;
 	int n;
 
-	if (head == NUL || *head == NULL)
+	if (head == NULL || *head == NULL)
 		return (0);
 
 	temporal = *head;
