@@ -1,11 +1,46 @@
 #include "lists.h"
 
 /**
- * count_node - counts the number of nodes in a circular list
- * @head: pointer pointing to the first node
+ * print_listint_safe - this function counts the number of nodes in a list
+ * @head: pointer to the head
+ * Return: returns the number of nodes, or 0 if not
+ */
+
+size_t count_element(const listint_t *head);
+
+size_t print_listint_safe(const listint_t *head)
+{
+	size_t len = count_element(head), j = 0;
+
+	if (len == 0)
+	{
+		while (head)
+		{
+			printf("[%p] %d\n", (void *)head->next, head->n);
+			head = head->next;
+			len++;
+		}
+	}
+	else
+	{
+		while (j < len)
+		{
+			printf("[%p] %d\n", (void *)head->next, head->n);
+			head = head->next;
+			i++;
+		}
+		printf("-> [%p] %d", (void *)head, head->n);
+	}
+	return (j);
+}
+
+/**
+ * count_node - this function counts the number of nodes in a list
+ * @head: pointer to the head
  * Return: returns the number of nodes
  */
-size_t count_node(const listint_t *head)
+
+size_t count_element(const listint_t *head)
 {
 	const listint_t *slow, *fast;
 	size_t count = 1;
@@ -37,36 +72,4 @@ size_t count_node(const listint_t *head)
 		fast = fast->next->next;
 	}
 	return (0);
-}
-
-/**
- * print_listint_safe - this function counts the number of nodes in a list
- * @head: pointer to the head
- * Return: returns the number of nodes, or 0 if not
- */
-
-size_t print_listint_safe(const listint_t *head)
-{
-	size_t len = count_node(head), j = 0;
-
-	if (len == 0)
-	{
-		while (head)
-		{
-			printf("[%p] %d\n", (void *)head->next, head->n);
-			head = head->next;
-			len++;
-		}
-	}
-	else
-	{
-		while (j < len)
-		{
-			printf("[%p] %d\n", (void *)head->next, head->n);
-			head = head->next;
-			i++;
-		}
-		printf("-> [%p] %d", (void *)head, head->n);
-	}
-	return (j);
 }
