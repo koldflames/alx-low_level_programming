@@ -1,75 +1,37 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - this function counts the number of nodes in a list
- * @head: pointer to the head
- * Return: returns the number of nodes, or 0 if not
+ * print_listint_safe - counts the number of nodes in a circular list
+ * @head: pointer pointing to the first node
+ * Return: returns the number of nodes and 0 otherwise
  */
-
-size_t count_element(const listint_t *head);
-
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t len = count_element(head), j = 0;
+	size_t len = 0, i = 0;
+	const listint_t *temp = head;
 
-	if (len == 0)
-	{
-		while (head)
-		{
-			printf("[%p] %d\n", (void *)head->next, head->n);
-			head = head->next;
-			len++;
-		}
-	}
-	else
-	{
-		while (j < len)
-		{
-			printf("[%p] %d\n", (void *)head->next, head->n);
-			head = head->next;
-			i++;
-		}
-		printf("-> [%p] %d", (void *)head, head->n);
-	}
-	return (j);
-}
-
-/**
- * count_node - this function counts the number of nodes in a list
- * @head: pointer to the head
- * Return: returns the number of nodes
- */
-
-size_t count_element(const listint_t *head)
-{
-	const listint_t *slow, *fast;
-	size_t count = 1;
-
-	fast = head->next->next;
-	slow = head->next;
-	if (head != NULL || head->next != NULL)
+	if (head == NULL)
 		return (0);
-	while (fast)
+
+	while (temp && temp > temp->next)
 	{
-		if (slow == fast)
-		{
-			slow = head;
-			while (slow != fast)
-			{
-				slow = slow->next;
-				fast = fast->next;
-				count++;
-			}
-			slow = slow->next;
-			while (slow != fast)
-			{
-				slow = slow->next;
-				count++;
-			}
-			return (count);
-		}
-		slow = slow->next;
-		fast = fast->next->next;
+		printf("[%p] %d\n", (void *)temp, temp->n);
+		temp = temp->next;
+		len++;
 	}
-	return (0);
+
+	if (temp)
+	{
+		printf("[%p] %d\n", (void *)temp, temp->n);
+		printf("-> [%p] %d\n", (void *)temp->next, temp->next->n);
+		len++;
+	}
+
+	i = len;
+
+	temp = head;
+	while (i--)
+		printf("[%p] %d\n", (void *)temp++, temp->n);
+
+	return (len);
 }
