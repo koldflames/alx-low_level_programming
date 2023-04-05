@@ -11,7 +11,7 @@ void free_listp2(listp_t **head)
 	if (head == NULL || *head == NULL)
 		return;
 
-	free_listp(&((*head)->next));
+	free_listp2(&((*head)->next));
 	free(*head);
 	*head = NULL;
 }
