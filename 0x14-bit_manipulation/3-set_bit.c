@@ -7,7 +7,7 @@
  * Return: returns the value of the bit if it succeeds and -1 if not
  */
 
-int set_bit(unsigned lon * n, unsigned int index)
+int set_bit(unsigned long *n, unsigned int index)
 {
 	if (index >= sizeof(unsigned long) * 8)
 	{
