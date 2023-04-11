@@ -13,7 +13,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	FILE *fd;
 	int ret_val = 1;
 
-	if (filename == NUL)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
@@ -35,7 +35,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	if (fprintf(fp, "%s", text_content) < 0)
+	if (fprintf(fd, "%s", text_content) < 0)
 	{
 		ret_val = -1;
 	}
