@@ -10,7 +10,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *fp;
+	FILE *fd;
 	int ret_val = 1;
 
 	if (filename == NULL)
@@ -18,18 +18,18 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	fp = fopen(filename, "w");
+	fd = fopen(filename, "w");
 
-	if (fp == NULL)
+	if (fd == NULL)
 	{
 		return (-1);
 	}
 
 	if (text_content != NULL)
 	{
-		fprintf(fp, "%s", text_content);
+		fprintf(fd, "%s", text_content);
 	}
-	fclose(fp);
+	fclose(fd);
 	chmod(filename, S_IRUSR | S_IWUSR);
 	return (ret_val);
 }
